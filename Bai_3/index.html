@@ -6,6 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 3 - Các thẻ HTML phổ biến</title>
+    <style>
+        main {
+            height: 2000px
+        }
+
+        .btn {
+            border-radius: 10px;
+            border: none;
+            padding: 10px
+        }
+
+        .btn-yellow {
+            background-color: yellow;
+        }
+
+        .btn-red {
+            background-color: red;
+        }
+
+        .container {
+            padding: 30px;
+            border: 4px solid green
+        }
+    </style>
 </head>
 
 <body>
@@ -21,9 +45,86 @@
         <img src="./images/image.jpg" alt="anh-2" width="300">
         <br>
         <img src="../anhr-cafe-sapa.jpg" alt="anh-loi">
+        <br>
+        <hr>
+        <h3>Giới thiệu về thẻ a</h3>
         <a href="../"></a>
         <a href="https://www.w3schools.com/html/html_filepaths.asp" target="_blank">Tìm hiểu về đường dẫn</a>
+        <br>
+        <a href="#footer"> Footer</a>
+        <br>
+        <a href="http://zingnews.vn"><img src="./images/image.jpg" alt="anh-2" width="300"></a>
+        <br>
+        <hr>
+        <h3>Giới thiệu về secmatic HTML</h3>
+        <img src="https://s3-ap-southeast-1.amazonaws.com/kipalog.com/6kdz4tnaud_image.png" alt="layout" width="100%">
+        <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">Secmatic HTML</a>
+        <br>
+        <hr>
+        <h3>Giới thiệu về Form</h3>
+        <form>
+            <div>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="Khoa" disabled><br>
+            </div>
+            <div>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Le" readonly><br><br>
+            </div>
+            <div>
+                <input type="radio" id="male" name="gender" value="0" checked>
+                <label for="male">Nam</label>
+                <input type="radio" id="female" name="gender" value="1" checked>
+                <label for="female">Nữ</label>
+            </div>
+            <div>
+                <label>Màu sắc yêu thích</label>
+                <br>
+                <input type="checkbox" name="red" id='red' value="red">
+                <label for="red">Red</label>
+                <br>
+                <input type="checkbox" name="green" id='green' value="green" checked>
+                <label for="red">Green</label>
+                <br>
+                <input type="checkbox" name="orange" id='orange' value="orange" checked>
+                <label for="red">Orange</label>
+                <br>
+                <button>Click me!</button>
+                <input type="button" value="Don't click me!" disabled>
+            </div>
+            <br>
+            <input type="date" required> <br>
+            <input type="number" min="2" max="20" step="2">
+            <br>
+            <label for="">Địa chỉ</label><br>
+            <input type="text" maxlength="10">
+            <br>
+            <hr>
+            <input type="submit" value="Submit"> <input type="reset">
+        </form>
+        <div id="books">
+            <div class="red">đỏ</div>
+            <div class="green">đỏ</div>
+            <button class=" btn btn-red">Button 1</button>
+        </div>
+        <div id="cooks">
+            <div class="red">đỏ</div>
+            <div class="orange">đỏ</div>
+            <button class=" btn btn-yellow"> Button 2</button>
+        </div>
     </main>
+    <footer id="footer" class="test">Đây là footer</footer>
+    <header>
+        <nav class="navbar"></nav>
+    </header>
+    <main>
+        <div class="container">
+            <h3>Hello world</h3>
+        </div>
+    </main>
+    <footer>
+        <div class="container"> Copyright &copy; </div>
+    </footer>
 </body>
 
 </html>
