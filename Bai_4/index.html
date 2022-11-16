@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4. Giới thiệu về CSS - Phần 1</title> <!-- External CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        header {
+            color: red;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            color: orange
+        }
+
+        #test-1 {
+            color: purple;
+            font-family: serif;
+        }
+
+        .btn-1 {
+            color: pink
+        }
+
+        .btn-2 {
+            color: green
+        }
+
+        button {
+            color: red;
+        }
+
+        li {
+            color: rgba(255, 0, 0, 0.529);
+        }
+
+        /* Hậu duệ */
+        ul li {
+            color: green
+        }
+
+        /* Cha con */
+        ul>li {
+            color: orange;
+            background: rgba(255, 0, 0, 0.235);
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> Bài 4. Giới thiệu về CSS - Phần 1 - Ngày 16.11.2022 </h1>
+    </header>
+    <main>
+        <h2>Xin chào, bạn khỏe không?</h2>
+        <!-- Inline CSS -->
+        <h2 style="color: blue;">Hello World!</h2>
+        <!-- Internal CSS-->
+        <h2>Xin chào, tối nay thật tuyệt</h2>
+        <h3>Bài 4</h3>
+        <h3>Thứ tự ưu tiên trong CSS:</h3>
+        <p> inline > internal, External</p>
+        <hr>
+        <br>
+        <h3>CSS với Text</h3>
+        <button class="btn-1">Click me</button>
+        <button class="btn-2">Click me 2</button>
+        <button class="btn-1 btn-2">Click me 3</button>
+        <button id="test-1"> Click me 4</button>
+        <button id="test-1" class="btn-1"> Click me 5</button>
+        <ul>
+            <li>Cat</li>
+            <li>Dog</li>
+            <li>
+                <ol>
+                    <li>Pig</li>
+                </ol>
+            </li>
+        </ul>
+        <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+        </ol>
+        <hr>
+        <br>
+        <h3>Selector CSS</h3>
+        <ol>
+            <li>Simple Selector</li>
+            <li>Conbinator</li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </main>
+</body>
+
+</html>
