@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5. Giới thiệu về CSS - Phần 2 </title>
+    <style>
+        /* body {
+            color: yellow;
+            background-color: green;
+        } */
+        /* main {
+            background-color: pink
+        } */
+        body {
+            height: 2000px;
+        }
+
+        header {
+            padding: 50px;
+            text-align: center;
+            color: red;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px 20px
+        }
+
+        tr td:first-child {
+            color: red
+        }
+
+        tr td:last-child {
+            color: green
+        }
+
+        table tr:nth-child(even) {
+            background-color: rgba(128, 128, 128, 1)
+        }
+
+        caption {
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: purple;
+            font-size: 20px;
+        }
+
+        tr td:nth-child(3) {
+            color: green
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .text-shadow {
+            color: white;
+            text-shadow: 2px 2px black, 0px 0px 8px blue;
+        }
+
+        #chess td {
+            padding: 0;
+            width: 50px;
+            height: 50px;
+        }
+
+        #chess tr:nth-child(odd) {
+            background-color: black;
+        }
+
+        #chess tr:nth-child(even) {
+            background-color: orange;
+        }
+
+        #chess table,
+        #chess tr,
+        #chess td {
+            border: none
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bài 5. Giới thiệu về CSS - Phần 2 - Ngày 18.11.2022</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <caption> November - 2022</caption>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tus</th>
+                    <th>Web</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>03</td>
+                    <td>04</td>
+                    <td>05</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>07</td>
+                    <td>08</td>
+                    <td>09</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>03</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <button><a href="">Click me!</a></button>
+        <button> Click vào đây!</button>
+        <a href="https://www.w3schools.com/cssref/pr_class_cursor.php"> Hiển thị chuột</a>
+        <br>
+        <hr>
+        <h1 class="text-shadow">Hello world!</h1>
+        <hr>
+        <br>
+        <h2>Ô cờ vua</h2>
+        <table id="chess">
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+</html>
