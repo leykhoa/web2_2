@@ -43,10 +43,9 @@
             color: green
         }
 
-        table tr:nth-child(even) {
+        /* table tr:nth-child(even) {
             background-color: rgba(128, 128, 128, 1)
-        }
-
+        } */
         caption {
             margin-bottom: 20px;
             font-weight: 700;
@@ -77,14 +76,25 @@
             height: 50px;
         }
 
-        #chess tr:nth-child(odd) {
-            background-color: black;
+        #chess table tr {
+            background-color: #fff;
         }
 
-        #chess tr:nth-child(even) {
+        #chess tr:nth-child(even)>td:nth-child(even) {
             background-color: orange;
         }
 
+        #chess tr:nth-child(odd)>td:nth-child(odd) {
+            background-color: orange;
+        }
+
+        #chess tr td:first-child {
+            background-color: white !important
+        }
+
+        /* #chess tr:nth-child(even) {
+            background-color: orange;
+        } */
         #chess table,
         #chess tr,
         #chess td {
