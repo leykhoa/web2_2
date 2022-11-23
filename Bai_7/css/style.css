@@ -1,0 +1,78 @@
+body {
+	height: 3000px;
+}
+
+header {
+	color: red;
+	padding: 50px;
+	text-align: center;
+}
+.box {
+	width: 30%;
+}
+
+.part {
+	margin: 0 auto;
+	margin: 20px;
+	padding: 20px;
+	border: 2px solid green;
+}
+
+.relative {
+	position: relative;
+	right: 333px;
+	bottom: 500px;
+	left: 90px;
+	/* Ưu tiên vị trí top và left */
+	border: 3px solid red;
+}
+.relative-2 {
+	position: relative;
+	width: 400px;
+	height: 200px;
+	border: 3px solid orange;
+	top: 50px;
+}
+
+.absolute {
+	position: absolute;
+	top: -10px;
+	right: 0;
+	width: 200px;
+	height: 100px;
+	border: 3px solid #73ad21;
+}
+.test {
+	height: 200px;
+	width: 50px;
+	background-color: pink;
+}
+.menu {
+	background-color: pink;
+	width: 100%;
+	margin: 0;
+}
+.menu li {
+	display: inline-block;
+	padding: 5px 15px;
+}
+
+.menu li:hover {
+	background-color: green;
+	color: white;
+}
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.sticky {
+	width: 100%;
+	height: 50px;
+	top: 50px;
+	background-color: grey;
+	position: sticky;
+}
+a {
+	margin: 50px;
+}
