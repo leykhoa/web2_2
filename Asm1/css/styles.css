@@ -1,0 +1,99 @@
+body {
+	margin: 0px;
+}
+
+.cv-document {
+	box-sizing: border-box;
+	border: none;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: arial, sans-serif, tahoma;
+	font-size: 10pt;
+}
+
+.cv-page {
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	text-decoration: none;
+	width: 900px;
+	min-height: 900px;
+	margin: 0 auto;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+	background-color: #fff;
+	position: relative;
+
+	padding: 40px;
+}
+
+* {
+	/* margin: 0;
+	padding: 0; */
+	box-sizing: border-box;
+}
+/* .row-info {
+	display: flex;
+	padding: 3px 0;
+}
+.row-info > b {
+	width: 100px;
+} */
+/* CSS general */
+.section {
+	margin-bottom: 40px;
+}
+.section-title {
+	padding-bottom: 5px;
+	border-bottom: 2px solid black;
+}
+
+/* set #info */
+.row-info {
+	padding: 3px 0 3px 0;
+}
+.row-info > b {
+	width: 80px;
+	display: inline-block;
+}
+#info {
+	position: relative;
+}
+#info img {
+	position: absolute;
+	width: 113px;
+	right: 0;
+}
+#info h1 {
+	color: #0e2452;
+	border-bottom: none;
+}
+
+/* .row {
+	display: flex;
+	gap: 30px;
+} */
+
+/* [class*='col-'] {
+	display: inline-block;
+} */
+
+.row {
+	border-bottom: 1px solid rgba(128, 128, 128, 0.249);
+	margin-bottom: 10px;
+}
+.col-4 {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+}
+.col-8 {
+	display: inline-block;
+}
