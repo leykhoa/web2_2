@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 20px
+        }
+
+        body>* {
+            border: 2px solid green
+        }
+
+        header,
+        nav,
+        footer {
+            grid-column: 1/ span 12;
+            height: 50px;
+        }
+
+        .side-bar-1 {
+            grid-column: 1 /span 2;
+        }
+
+        .side-bar-2 {
+            grid-column: span 2 /13
+        }
+
+        main {
+            grid-column: 3 /span 8
+        }
+
+        main,
+        aside {
+            height: 500px
+        }
+
+        ul {
+            display: flex;
+            gap: 20px
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>News</li>
+            <li>Contact</li>
+        </ul>
+    </header>
+    <nav>Navigation</nav>
+    <aside class="side-bar-1">side bar</aside>
+    <main>Content </main>
+    <aside class="side-bar-2">sibe bar</aside>
+    <footer>footer</footer>
+</body>
+
+</html>

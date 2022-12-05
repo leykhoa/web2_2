@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10. Xây dựng layout với CSS Grid </title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-auto-rows: 250px;
+            grid-gap: 10px;
+            /* grid-template-rows: ; */
+        }
+
+        .grid-item {
+            background-color: green
+        }
+
+        .grid-item-1 {
+            grid-column: 1 / span 2;
+        }
+
+        /* .grid-item-3 {
+            grid-area: 1 / 2 / span 2 / span 3;
+        } */
+        .flex-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .grid-item-3 {
+            grid-area: 2 / 2 / span 2 / span 3;
+        }
+
+        .flex-item {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item-1">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item grid-item-3">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item grid-item-6">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div class="flex-item">9</div>
+    </div>
+</body>
+
+</html>
