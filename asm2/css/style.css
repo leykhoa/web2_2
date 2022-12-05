@@ -1,0 +1,111 @@
+/* tìm hiểu thêm về :root */
+
+:root {
+	--color-primary: rgb(4, 119, 233);
+}
+
+/* general CSS */
+
+body {
+	height: 2000px;
+}
+* {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+
+section {
+	display: flex;
+}
+section > * {
+	flex: 1;
+}
+.section--gap {
+	gap: 20px;
+}
+
+/* exp -bar */
+.exp-bar {
+	width: 50px;
+	height: 4px;
+	background-color: grey;
+	display: inline-block;
+}
+.fill {
+	background-color: var(--color-primary);
+}
+
+/* Header */
+
+/* banner */
+.banner {
+	position: relative;
+	height: 300px;
+}
+.banner img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.banner__title {
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+	text-shadow: 0 2px 2px blue;
+}
+
+.banner-2 {
+	background-image: url('https://cdn.pixabay.com/photo/2020/04/30/14/03/mountains-and-hills-5112952__480.jpg');
+	position: relative;
+	height: 300px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.banner-2__title {
+	position: absolute;
+}
+
+/* navigation */
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+}
+
+nav > * {
+	flex: 1;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+}
+nav > *:hover {
+	background-color: orange;
+	color: white;
+}
+
+/* End header */
+
+/* main */
+
+/* info */
+#info {
+	background-color: pink;
+	padding: 15px;
+}
+
+#target {
+	background-color: rgb(187, 178, 178);
+	padding: 15px;
+}
