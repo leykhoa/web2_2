@@ -7,13 +7,19 @@
 /* general CSS */
 
 body {
-	height: 2000px;
+	height: 5000px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 a {
 	text-decoration: none;
+}
+img {
+	width: 100%;
 }
 /* section css */
 section {
@@ -121,6 +127,9 @@ nav > *:hover {
 	background-color: orange;
 	color: white;
 }
+.nav-brand {
+	position: relative;
+}
 
 /* End header */
 
@@ -143,4 +152,78 @@ nav > *:hover {
 #language {
 	padding: 20px;
 	border: 2px solid grey;
+}
+
+#certificate .section-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+}
+.card {
+	display: flex;
+	gap: 20px;
+	font-size: 14px;
+}
+.card--img {
+	flex: 0.35;
+	object-fit: contain;
+}
+.card--text {
+	flex: 0.7;
+}
+.card h4 {
+	font-weight: 500;
+}
+#project {
+	padding: 0 20px;
+}
+
+#project .section-content {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+}
+#project .card {
+	flex-direction: column;
+}
+
+#project .card img {
+	height: 180px;
+	object-fit: cover;
+}
+.sub-title {
+	display: flex;
+	gap: 10px;
+}
+.card .content > div {
+	display: flex;
+	gap: 5px;
+}
+.card .content > div p:first-child {
+	flex: 0.25;
+}
+.card .content > div p:last-child {
+	flex: 0.75;
+}
+#project .content {
+	font-size: 12px;
+}
+.change-img {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 5px solid white;
+	position: absolute;
+	top: -15px;
+	left: 45px;
+}
+.fill-skill {
+	width: 50px;
+	height: 2px;
+	display: inline-block;
+	background-color: grey;
+}
+.border-blue {
+	background-color: blue;
 }
