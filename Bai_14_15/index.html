@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 14 - 15</title>
+</head>
+
+<body>
+    <script>
+
+        let a = 10
+
+        let b = 'JavaScript';
+        let c;
+        let d = null;
+        let f = {}
+        let g = ''
+        let h = true;
+        let i = false;
+        console.log(typeof a, a);
+        console.log(typeof b, b);
+        console.log(typeof c, c);
+        console.log(typeof d, d);
+        console.log(typeof g, g);
+
+        console.log(typeof f, f);
+        console.log(typeof h, h);
+        console.log(typeof i, i);
+
+
+        let num = 20
+        {
+            console.log(num);
+            var num2 = 10
+
+        }
+
+        console.log('hello var', num2);
+        console.log('Xin chao var', num3);
+
+        var num3 = 'Hello ban';
+        console.log('Xin chao var2', num3);
+
+        // console.log('Xin chao let', num4);
+
+        // let num4 = 10;
+
+        const NUMBERPHONE = '0909000999'
+
+        const array = ['hello', 'hi', 'good morning']
+
+
+        // Toán tử
+
+        console.log('kết quả 10+20', a + b);
+
+        let str1 = '10'
+        let number1 = 20
+
+        console.log('kết quả str + number', str1 + number1);
+
+        // Biết đổi string của số --> số
+
+        //  thêm dấu + vào trước
+
+        // dùng hàm Number(giá trị cần chuyển đổi)
+
+        // parseInt() --> lấy số nguyên
+
+        // parseFloat() --> số thực
+
+        console.log('kết quả str + number (thêm dấu +)', +str1 + number1);
+
+        console.log('kết quả str + number (thêm Number)', Number(str1) + number1);
+
+
+        //Gán và so sánh
+
+        let string1 = 'Ngày 17/12'
+        console.log('kết quả string', string1);
+        string1 = 10
+        console.log('kết quả string = 10', string1);
+
+        string1++
+        // string = string+1
+        console.log('kết quả string + 1', string1);
+
+        string1 += 20
+        // string = string + 20
+        console.log('kết quả string + 20', string1);
+
+
+        // so sánh
+
+        // phân biệt kiểu so sánh == và ===
+        let string2 = '31'
+
+        // == so sánh giá trị
+
+        // === so sánh kiểu dữ liệu và giá trị
+
+        console.log('so sánh ==', string1 == string2);
+
+        console.log('so sánh ===', string1 === string2);
+
+        // if (5 > 10) {
+        //     alert('Kết quả đúng rồi!!!')
+        //     console.log('Phép so sánh đúng');
+        // } else {
+        //     alert('Kết quả sai rồi!!!')
+        // }
+        // Phần dư của phép tính
+        let remainder = 10 % 3
+
+        console.log('10 chia 3 thì dư', remainder);
+
+        // tính 1658 giây bằng bao nhiêu giờ, bao nhiêu phút, bao nhiêu giây
+        const secondInput = Number(prompt('Nhập vào số giây để tính:'))
+
+
+        const hour = parseInt(secondInput / 3600);
+
+        const min = parseInt((secondInput - hour * 3600) / 60)
+
+        const second = secondInput % 60
+
+        console.log('Kết quả:', hour, 'giờ', min, 'phút', second, 'giây');
+
+        // Toán tử ba ngôi
+
+        10 > 4 ? console.log('10 > 4') : console.log('10<4');
+
+
+        // true khi second == true hoặc second có giá trị xác định
+        if (second) {
+            console.log();
+        }
+
+
+        if (second == true) {
+            console.log();
+        }
+
+
+
+
+
+        // Falsy
+
+
+
+        if (!second) {
+            console.log();
+        }
+
+        if (second == false || second == undefined || second == null || second == 0 || second == "") {
+            console.log();
+        }
+
+        // if else if
+
+
+        const checkA = 10
+        const checkB = 20
+        const checkC = 30
+        let max = checkA
+
+
+        if (checkB > checkA) {
+            max = checkB
+            if (checkC > checkB) {
+                max = checkC
+                console.log('Số lớn nhất là ', max);
+            } else {
+                console.log('Số lớn nhất là ', max);
+            }
+        } else if (checkA > checkC) {
+            console.log('Số lớn nhất là ', max);
+
+        } else {
+            max = checkC
+            console.log('Số lớn nhất là ', max);
+        }
+
+        const value = 'Dog'
+        switch (value) {
+            case 'Cat':
+                console.log('Đây là mèo');
+                break;
+            case 'Dog':
+                console.log('đây là chó');
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
