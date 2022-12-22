@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 17. Hàm và mảng </title>
+</head>
+
+<body>
+    <script>
+        // hàm và cách khai báo hàm
+
+        function myFunction(params) {
+            // có thể có return  hoặc không có return
+            return params * params
+        }
+
+        function myFunction2() {
+            // có thể có return  hoặc không có return
+            console.log('Hello world');
+        }
+
+        console.log('check function 1', myFunction(12));
+        console.log('check function 2', myFunction2());
+
+        function area(a, b) {
+            return a * b / 2
+        }
+        console.log(area(3, 4));
+        console.log(area(5, 10));
+
+        function checkAge(year) {
+            const yearCurrent = new Date().getFullYear();
+            const age = yearCurrent - year
+            if (age > 14) {
+                return { age: age, msg: 'Bạn đủ tuổi làm CCCD' }
+            } else {
+                return { age, msg: 'Bạn chưa đủ tuổi làm CCCD' }
+            }
+        }
+
+        const check = checkAge(2000)
+        console.log('age', check.age, 'Thông báo', check.msg);
+        console.log('age', checkAge(2015).age, 'Thông báo', checkAge(2015).msg);
+
+        // arrow function khởi tạo bằng var, let, const (nên dùng const trong khai báo arrow function)
+
+        const checkError = (value) => {
+            return value
+
+        }
+
+        const checkLengthString = (value) => value.length
+
+        console.log('check Error', checkError(false));
+        console.log('check length string', checkLengthString('Hello các bạn!'));
+
+
+    </script>
+    <script>
+        // Array
+        // khai báo array
+        const fruits = ['Banana', 'Orange', 'Lemon', 'Kiwi']
+        const persons = [{ name: 'Binh', age: 18, address: 'HN' }, { name: 'Cong', age: 16, address: 'HCM' }, 'Lemon', false]
+        console.log('check length fruits', fruits.length);
+        console.log('phần tử 0', fruits[0]);
+        console.log('check person', persons);
+
+        const numbers = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', undefined]
+        for (let i = 0; i < numbers.length; i++) {
+            console.log('index', i, 'element', numbers[i]);
+        }
+
+        // Khởi tạo một array bằng method new Array
+
+        const arr = new Array(5);
+        console.log('check arr', arr);
+
+        // map(), forEach(), join(), split(), filter(), find(), pop(), splice(),...
+
+        // map()
+        const array1 = [1, 4, 9, 16];
+
+        // pass a function to map
+        const map1 = array1.map(element => element * 5);
+
+        console.log(map1);
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+
+
+    </script>
+    <script>
+        'use strict';
+        let isFunction = true
+        let b = true
+
+        let public = 'Hello world';
+        console.log('check public', public);
+
+        if (b) {
+
+            // var iFunction = false
+            iFunction = false;
+            console.log('check isFunction', isFunction, 'check 2', iFunction);
+        }
+    </script>
+</body>
+
+</html>
