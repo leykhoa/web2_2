@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 18 - Object và vòng lặp</title>
+</head>
+
+<body>
+    <script>
+
+
+        const car = {
+            name: 'Toyota',
+            price: '10000'
+        }
+
+        const person1 = {
+            name: 'Cong',
+            age: 20,
+            address: 'HN'
+        }
+
+        const table = {
+            color: 'black',
+            size: 'large',
+            weight: 15,
+            weightUnit: 'kg',
+            height: 80,
+        }
+
+        const Apple = {
+            size: 10,
+            color: 'red',
+            setSize: (size) => this.size = size,
+            status: false
+        }
+        const minh = {
+            name: 'Minh',
+            age: 20,
+            friends: ['Tùng', 'Nam', 'Khôi']
+        }
+        console.log('table', table);
+        console.log('apple', Apple);
+        console.log('check color table', table.color);
+        console.log('check height table', table.height);
+        console.log('check bạn Minh', minh.friends[1]);
+
+
+        console.log('check bạn Minh --', minh['friends']);
+
+        let key = prompt('Nhập vào thuộc tính muốn kiểm tra (friends,age, name )')
+        console.log('kiểm tra tuổi của Minh', minh[key]);
+
+        // Kiểm tra khi không biết trước key là gì
+        console.log('kiểm tra tuổi của Minh cách 2', minh.key);
+
+        // Lên tìm hiểu về tham chiếu tham trị của array và object, function
+
+        // Kiển dữ liệu thông thường
+
+        const animals = [{ name: 'Dog', color: 'White', weight: 10 }, { name: 'Cat', color: 'Black', weight: 3 }, { name: 'Pig', color: 'White', weight: 50 }]
+
+        // lấy thông tin của mèo
+
+        console.log('kiểm tra thông tin mèo', animals[1]);
+
+
+        const cat = animals[1];
+        cat.color = 'red';
+
+
+        // Khi thay đổi giá trị của mèo, thì array animals cũng thay đổi theo
+        console.log('Kiểm tra thông tin mèo', animals, cat);
+        // Mình sẽ copy nội dung của array animals
+        const cat2 = { ...animals[1] }
+        cat2.color = 'green'
+
+
+        console.log('Kiểm tra thông tin mèo đổi màu xanh', animals, cat2);
+
+        // Key this
+        // Khi không có this
+        let firstName = 'Le'
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                return firstName + " " + this.lastName;
+            }
+        };
+        console.log('Kiểm tra  full name person', person.fullName());
+
+        const person5 = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+
+        console.log('Kiểm tra  full name person có this', person5.fullName());
+
+        // Tạo giỏ hàng
+
+        const productList = [{ name: 'Iphon 13e', color: 'Red', model: 'IP13' }, { name: 'Iphone 12', color: 'Red', model: 'IP12' }, { name: 'Iphone 11', color: 'Red', model: 'IP11' }, { name: 'Iphone', color: 'Red', model: 'IP13' }, { name: 'Iphone 14', color: 'White', model: 'IP14' }, { name: 'Samsung', color: 'Red', model: 'A92' }]
+        // Thêm sản phẩm vào trong array
+        productList.push({ name: 'Samsung', color: 'Green', model: 'M52' })
+        console.log(productList);
+
+        // Vòng lặp for
+
+        // 1. Khối lệnh khởi tạo: chạy lầ đầu khi vòng lặp được gọi
+        // 2.Khối điều kiện để thực thi khối lệnh trong vòng lặp
+        // 3. Khối lệnh thực thi khi kết thúc vòng lặp
+        for (let index = 0; index < productList.length; index++) {
+            if (index == 4) {
+                continue
+            }
+            if (index == 6) {
+                break
+            }
+            console.log('sản phẩm trong giỏ hàng', index, productList[index].name,);
+
+
+        }
+
+        // Vòng lặp while
+
+        let i = 0
+        while (i % 10 < 5) {
+            console.log('check i', i);
+            i++
+        }
+
+        // Vòng lặp do ... while 
+
+        let j = 0
+
+        do {
+            console.log('check j', j);
+            j++
+        }
+        while (i % 10 < 0)
+
+
+
+
+
+    </script>
+</body>
+
+</html>

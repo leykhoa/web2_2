@@ -9,8 +9,15 @@
 </head>
 
 <body>
-    <script>
+    <!-- <script>
+        const array = [item1, item2, item3, ... , itemn]
+
+        forEach((element, index, array) => { /* khối câu lệnh*/ })
         // hàm và cách khai báo hàm
+        const fruits1 = ['lemon', 'orange', 'banana', 'kiwi']
+        const checke = fruits1.forEach(element => element)
+        console.log('check', checke);
+
 
         function myFunction(params) {
             // có thể có return  hoặc không có return
@@ -58,12 +65,34 @@
         console.log('check length string', checkLengthString('Hello các bạn!'));
 
 
-    </script>
+    </script> -->
     <script>
         // Array
         // khai báo array
-        const fruits = ['Banana', 'Orange', 'Lemon', 'Kiwi']
-        const persons = [{ name: 'Binh', age: 18, address: 'HN' }, { name: 'Cong', age: 16, address: 'HCM' }, 'Lemon', false]
+        const fruits = ['Banana', 'Orange', 'Lemon', 'Kiwi', "Mango", 'Apple']
+
+        const animals = ['Cat', 'Dog', 'Pig', 'Tiger', 'Lion', 'Bird', 'Duck']
+        console.log('ffff', animals[7]);
+        animals.length = 7
+        animals[0] = 'Cat';
+        animals[3] = 'Tiger';
+        animals[7] = undefined;
+
+
+
+
+        const persons = [{ name: 'Dat', age: 18, }, { name: 'Dung', age: 17, }, { name: 'Long', age: 23 }]
+        const convert = persons.toString()
+        console.log('check to string', JSON.parse(convert));
+        const cities = ['Ha Noi', 'Da Nang', 'Can Tho', 'Ho Chi Minh', 'Vung Tau', 'Qua Nhon', 'Vinh']
+
+        for (let i = 0; i < cities.length; i++) {
+            console.log('index', i);
+            console.log('phần tử trong mảng', cities[i]);
+        }
+
+
+        const person = [{ name: 'Binh', age: 18, address: 'HN' }, { name: 'Cong', age: 16, address: 'HCM' }, 'Lemon', false]
         console.log('check length fruits', fruits.length);
         console.log('phần tử 0', fruits[0]);
         console.log('check person', persons);
@@ -105,6 +134,8 @@
             iFunction = false;
             console.log('check isFunction', isFunction, 'check 2', iFunction);
         }
+
+
     </script>
 </body>
 
