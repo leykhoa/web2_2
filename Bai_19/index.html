@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 19 - DOM và Event trong JavaScript</title>
+    <style>
+        .color-red {
+            color: red;
+            font-size: 30px
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id='test-1'>Hello World! Welcome to JavaScript</h1>
+    <h1 id='test-2'>Hello World! Welcome to JavaScript</h1>
+    <li id='li-2'>Chicken</li>
+    <ul id='test-3'>
+        <li id='li-1'>Cat</li>
+        <li>Dog</li>
+        <li>Pig</li>
+        <li>Chicken</li>
+    </ul>
+    <div class="class-1">Hi</div>
+    <div class="class-1">Hi</div>
+    <div class="class-1">Hi</div>
+    <div id="test-4"></div>
+    <button onclick="handleClick()">Click me!</button>
+    <script>
+        // Tìm phần tử trong HTML và thao tác với phần tử đó
+        // document.getElementById(id) --> lấy phần tử trong HTML theo id
+        const test1 = document.getElementById('test-1') // trong method là một string
+
+        console.log('check test 1', test1);
+
+        // Thay đổi nội dung trong test-1 - chỉ hiển thị giá trị thay đổi
+        test1.innerText = '<i>Nội dung đã được thay đổi!!!</i>'
+
+
+        const test2 = document.getElementById('test-2') // trong method là một string
+
+        // Thay đổi phần tử trong test2 --> nó sẽ hiển thị phần tử của HTML
+        test2.innerHTML = "<a href='#'>Click me!!!</a>"
+
+        //  Gọi phần tử bằng id
+
+        const test3 = document.getElementById('test-3')
+        console.log(test3);
+
+        // Lấy giá trị của li-1 thông qua thẻ parent
+        console.log('kiểm tra document', document);
+
+        const li1 = test3.querySelector('#li-1')
+        console.log('kiểm tra li 1', li1);
+
+        // Những các có thể tìm được phần tử trong HTML bằng JS
+        // 1. document.getElementById() --> chỉ trả về một element đầy tiên có id là name_id
+        // 2. document.getElementsByClassName('class_name') --> trả về một HTMLCollection có class='class_name'
+        // 3. element.querySelector('selectors') (có thể là class(thêm dấu chấm), id(thêm dấu #), tên tag) 
+        // --> chỉ trả về một element đầy tiên có trùng với thông tin selector --> có thể làm với các element để tìm các phần tử bên trong nó
+        // 4. element.querySelectorAll('selectors')(có thể là class(thêm dấu chấm), id(thêm dấu #), tên tag) 
+        // --> trả về một NodeList có selector  trùng với thông tin selector --> có thể làm với các element để tìm các phần tử bên trong nó
+        // Tìm hiểu sự khác nhau giữa HTMLCollection và NodeList
+        // Tài liệu đọc thêm https://stackoverflow.com/questions/15763358/difference-between-htmlcollection-nodelists-and-arrays-of-objects
+
+        const class1 = document.getElementsByClassName('class-1')
+        const class11 = document.querySelector('.class-1')
+        const class12 = document.querySelectorAll('.class-1')
+        console.log('kiểm tra class 1', class1);
+        console.log('kiểm tra class 1 bằng querySelector', class11);
+        console.log('kiểm tra class 1 querySelectorAll', class12);
+
+        // Ví dụ thêm trường hợp dùng querySelector
+
+        const h1 = document.querySelector('h1')
+        console.log('check h1', h1);
+
+        // Lấy tất cả thẻ li trong document
+        const liList1 = document.querySelectorAll('li')
+
+        // chỉ lấy li trong thẻ ul
+
+        const listLi2 = test3.querySelectorAll('li')
+
+        console.log('li trong doc', liList1);
+        console.log('li trong ul', listLi2);
+
+
+        // Tạo phần tử mới
+
+        // gọi phần thử parent muốn thêm vào
+
+        const test4 = document.querySelector('#test-4')
+        const btn1 = document.createElement('button')
+        btn1.style.width = '200px';
+        btn1.style.height = '100px';
+        btn1.className = 'color-red'
+
+        // các thuộc tính CSS dùng trong JavaScript phải chuyển đổi theo quy tắc camelcase
+
+        btn1.style.backgroundColor = 'green';
+        btn1.style.borderRadius = '50px'
+        btn1.innerHTML = 'Click me!!!';
+        test4.appendChild(btn1)
+
+        // onclick và click 
+        // click --> sự kiện trong Js, phải addEventLister('event_name', ()=> {})
+        // onclick --> thuộc tính của phần tử,
+
+        function handleClick() {
+            alert('Hello')
+        }
+
+
+        test4.addEventListener('mouseover', () => {
+            alert('Move out')
+        })
+
+    </script>
+</body>
+
+</html>
