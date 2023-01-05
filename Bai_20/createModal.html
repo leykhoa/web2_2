@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Modal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 3000px;
+        }
+
+        .modal-container {
+            background-color: rgba(45, 43, 43, 0.571);
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            display: none;
+        }
+
+        .modal {
+            width: 60%;
+            height: 300px;
+            background-color: #fff;
+            position: absolute;
+            top: 100px;
+            left: 20%
+        }
+
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            height: 20%;
+            border-bottom: 1px solid grey;
+        }
+
+        .modal-body {
+            height: 60%;
+        }
+
+        .modal-footer {
+            height: 20%;
+            border-top: 1px solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: red">Hello</h1>
+    <button id="modal-container">Open Modal</button>
+    <div class="modal-container">
+        <div class="modal">
+            <div class="close">X</div>
+            <div class="modal-header">Title</div>
+            <div class="modal-body">Content</div>
+            <div class="modal-footer">Footer</div>
+        </div>
+    </div>
+    <script>
+        const modalId = document.getElementById('modal-container')
+        const modalContainer = document.querySelector('.modal-container')
+        const modal = document.querySelector('.modal')
+
+        modalId.addEventListener('click', () => {
+            if (modalId && modalContainer && modalContainer.style.display != 'block') {
+                modalContainer.style.display = 'block'
+            }
+        })
+        const close = modalContainer.querySelector('.close')
+        close.addEventListener('click', () => {
+            modalContainer.style.display = 'none'
+        })
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.modal') && modalContainer.style.display == 'block' && !e.target.closest('#modal-container')) {
+                modalContainer.style.display = 'none'
+            }
+        })
+
+    </script>
+</body>
+
+</html>
